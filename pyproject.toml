@@ -9,8 +9,14 @@ dependencies = [
     "jax>=0.7.0",
     "matplotlib>=3.10.5",
     "numpy>=2.3.2",
+    "pyqt6>=6.9.1",
     "tqdm>=4.67.1",
     "turbulent-propagation",
+]
+
+[project.optional-dependencies]
+cuda12 = [
+    "turbulent-propagation[cuda12]",
 ]
 
 [tool.uv.sources]

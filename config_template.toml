@@ -1,19 +1,19 @@
 [grid]
 size=256 # Grid size
-length=0.4 # Grid length
+length=0.6 # Grid length
 
 [turbulence]
-Cn2=1e-15 # Refractive index structure constant
+Cn2=1e-14 # Refractive index structure constant
 L0=10.0 # Outer scale of turbulence
 l0=3e-3 # Inner scale of turbulence
 
 [beam]
 wavelength=633e-9
-waist=0.03
+waist=0.15
 
 [simulation]
-propagation_distance=5000
+propagation_distance=800
 magnification=1
 nsteps=1
 batchsize=128
-nbatches=128
+nbatches=8

@@ -1,13 +1,14 @@
-import h5py
 import matplotlib.pyplot as plt
-import numpy as np
-
 import matplotlib.animation as animation
+import matplotlib
+import jax.numpy as jnp
+from in_out import read_first_batch
 
-with h5py.File("output.h5", "r") as f:
-    fields = np.array(f["fields"][:100])  # Load first 100 fields
+matplotlib.use("QtAgg")
 
-intensities = np.abs(fields) ** 2
+fields = read_first_batch("output.h5", 128)
+
+intensities = jnp.abs(fields) ** 2
 
 fig, ax = plt.subplots()
 im = ax.imshow(intensities[0], cmap="hot", animated=True)
