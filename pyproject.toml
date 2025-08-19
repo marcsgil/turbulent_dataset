@@ -1,0 +1,17 @@
+[project]
+name = "turbulent-dataset"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "h5py>=3.14.0",
+    "jax>=0.7.0",
+    "matplotlib>=3.10.5",
+    "numpy>=2.3.2",
+    "tqdm>=4.67.1",
+    "turbulent-propagation",
+]
+
+[tool.uv.sources]
+turbulent-propagation = { git = "https://github.com/marcsgil/turbulent_propagation.git" }
