@@ -36,7 +36,6 @@ class SimulationParameters:
     z: float
     magnification: float
     Cn2: float
-    r0: float
     L0: float
     l0: float
 
@@ -78,7 +77,6 @@ def load_parameters(config_path: str | Path) -> SimulationParameters:
     magnification = config["simulation"]["magnification"]  # Magnification factor
 
     Cn2 = config["turbulence"]["Cn2"]  # Structure constant of the refractive index
-    r0 = atmospheric_coherence_length(z / nsteps, Cn2, wavelength)
     L0 = config["turbulence"]["L0"]  # Outer scale of turbulence
     l0 = config["turbulence"]["l0"]  # Inner scale of turbulence
 
@@ -97,7 +95,6 @@ def load_parameters(config_path: str | Path) -> SimulationParameters:
         z=z,
         magnification=magnification,
         Cn2=Cn2,
-        r0=r0,
         L0=L0,
         l0=l0,
     )

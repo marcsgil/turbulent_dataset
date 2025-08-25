@@ -46,7 +46,7 @@ def main(config_path="config.toml", output_path="output.h5", dataset_name="field
             key=keys[n],
             nsamples=param.batchsize,
             nsteps=param.nsteps,
-            r0=param.r0,
+            Cn2=param.Cn2,
             L0=param.L0,
             l0=param.l0,
         )

@@ -20,4 +20,4 @@ cuda12 = [
 ]
 
 [tool.uv.sources]
-turbulent-propagation = { git = "https://github.com/marcsgil/turbulent_propagation.git" }
+turbulent-propagation = { git = "https://github.com/marcsgil/turbulent_propagation.git", rev = "11d3af601d8d42fe859b5e3cc03f1a4e80c5ae7e" }
